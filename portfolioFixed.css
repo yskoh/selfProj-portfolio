@@ -16,7 +16,7 @@ body,div,ul,li,dl,dt,dd,ol,p,h1,h2,h3,h4,h5,h6,form {
 
 body {
   font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-  width: 1680px;
+  width: 1600px;
   height: 1050px;
 }
 
@@ -91,7 +91,8 @@ img {
   }
 
   .cards {
-    display:inline-block;
+    display:block;
+	float: left;
     width: 100px;
     height: 100px;
     background-color: black;
