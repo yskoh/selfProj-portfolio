@@ -47,8 +47,23 @@ $(document).ready(function () {
   });
 
   $('.cards').bind('mouseleave', function (e) {
-    $(this).css('opacity', 1);
+    $(this).css('opacity', 0.5);
     //color fadeout
   });
+	
+	$('body').one('mousewheel', function(e){
+		if(e.originalEvent.wheelDelta < 0) {
+		 //scroll down
+		 console.log('Down');
+			$("#introPg").css({"top":"-1000px"});
+      $("#aboutPg").css({"top":"0px"});
+		}else {
+		 //scroll up
+		 console.log('Up');
+		}
+
+		//prevent page fom scrolling
+		return false;
+	});
 
 });
