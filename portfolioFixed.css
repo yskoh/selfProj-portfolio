@@ -2,7 +2,7 @@
 body,div,ul,li,dl,dt,dd,ol,p,h1,h2,h3,h4,h5,h6,form {
   margin:0;
   padding:0;
-  overflow:scroll;
+  overflow:hidden;
 }
 
 /* latin */
@@ -17,7 +17,7 @@ body,div,ul,li,dl,dt,dd,ol,p,h1,h2,h3,h4,h5,h6,form {
 body {
   font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
   width: 1600px;
-  height: 1000px;
+  height: 1050px;
 }
 
 ul,ol,dl {
