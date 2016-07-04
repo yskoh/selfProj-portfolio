@@ -1,0 +1,162 @@
+/* body 공통속성 */
+body,div,ul,li,dl,dt,dd,ol,p,h1,h2,h3,h4,h5,h6,form {
+  margin:0;
+  padding:0;
+  overflow:scroll;
+}
+
+body {
+  font:normal dotum,'돋움';
+  width: 100%;
+  height: 100%;
+}
+
+ul,ol,dl {
+  list-style:none;
+}
+
+a {
+  text-decoration: none;
+  color:inherit;
+}
+
+img {
+  border:0;
+  vertical-align:top;
+}
+
+#container {
+  /*background-color: #F9AA00;*/
+  background-color: #A7BED0; /*blue*/
+  width: 100%;
+  height: 95%;
+  position: relative;
+}
+
+
+    #logo {
+      display: inline;
+    }
+
+    #gnb {
+      background-color: #FC7878; /*pink*/
+      position:relative;
+      top: 0;
+      left: 0;
+      margin: 0;
+      width:100%;
+      height:5%;
+      z-index:2;
+    }
+
+      #gnbListDiv {
+        margin-right: 10px;
+        float:right;
+      }
+
+      .gnbList {
+        display: inline-block;
+        padding: 10px;
+      }
+
+  #introPg {
+    background-color: #FCD68A; /*grandis*/
+    background-image: url("./create.jpg");
+    /*margin-top으로 하면 안 되는 이유??*/
+    /*margin-top:5%;*/
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  #curtain {
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    /*z-index: 1;*/
+    /*background-color: black;*/
+  }
+  
+/*  #introImg {
+    width:100%;
+    height:100%;
+  }*/
+
+  #aboutPg {
+    background-color:#F9AA00; /*진노*/
+    width: 100%;
+    height: 100%;
+    top:100%;
+    position:absolute;
+    /*position:fixed; 왜 이렇게 할 경우, 조금은 위에 뜸??*/
+  }
+  #divForAboutBox {
+    position:relative;
+    width: 100%;
+    height: 100%;
+  }
+    #aboutBox {
+      background-color: green;
+      width: 70%;
+      height:70%;
+      margin: 0 auto;
+      position:absolute;
+      padding-top: 15%;
+    }
+
+  #projectsPg {
+    background-color: #CD8701; /*harvest gold*/
+    width: 100%;
+    height: 100%;
+     top:200%;
+    position:absolute;
+
+  }
+
+    .projCircle {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background-color: red;
+      display: inline-block;
+    }
+
+  #contactPg {
+    background-color: #FBD77F; /*golden glow*/
+    width: 100%;
+    height: 100%;
+     top:300%;
+    position:absolute;
+  }
+
+  #contactInfo {
+    background-color: #bbb;
+    width:70%;
+    height:70%;
+  }
+
+  #contName {
+    background-color: #eee;
+    width:30%;
+    height:5%;
+  }
+
+  #contEmail {
+    background-color: #fff;
+    width:30%;
+    height:5%;
+  }
+
+  #contNo {
+    background-color: #eee;
+    width:30%;
+    height:5%;
+  }
+
+  .centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}

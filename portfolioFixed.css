@@ -1,0 +1,190 @@
+/* body 공통속성 */
+body,div,ul,li,dl,dt,dd,ol,p,h1,h2,h3,h4,h5,h6,form {
+  margin:0;
+  padding:0;
+  overflow:scroll;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v7/zhcz-_WihjSQC0oHJ9TCYAzyDMXhdD8sAj6OAJTFsBI.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+body {
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  width: 1680px;
+  height: 1050px;
+}
+
+ul,ol,dl {
+  list-style:none;
+}
+
+a {
+  text-decoration: none;
+  color:inherit;
+}
+
+img {
+  border:0;
+  vertical-align:top;
+}
+
+#container {
+  /*background-color: #F9AA00;*/
+  background-color: #A7BED0; /*blue*/
+  width: 100%;
+  height: 95%;
+  position: relative;
+}
+
+
+    #logo {
+      display: inline;
+    }
+
+    #gnb {
+      background-color: #FC7878; /*pink*/
+      position:relative;
+      top: 0;
+      left: 0;
+      margin: 0;
+      width:100%;
+      height:5%;
+      z-index:2;
+    }
+
+      #gnbListDiv {
+        margin-right: 10px;
+        float:right;
+      }
+
+      .gnbList {
+        display: inline-block;
+        padding: 10px;
+      }
+
+  #introPg {
+    background-color: #FCD68A; /*grandis*/
+    background-image: url("./create.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /*margin-top으로 하면 안 되는 이유??*/
+    /*margin-top:5%;*/
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  #curtain {
+    /*position:absolute;*/
+    width: 100%;
+    height: 100%;
+/*    z-index: 1;
+    background-color: black;*/
+    overflow-y:hidden;
+    overflow-x: hidden;
+  }
+
+  .cards {
+    display:inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    z-index: 1;
+    margin:0;
+    padding:0;
+    border:0;
+  }
+
+  #aboutPg {
+    background-color:#FBD77F;
+    width: 100%;
+    height: 100%;
+    top:100%;
+    position:absolute;
+    /*position:fixed; 왜 이렇게 할 경우, 조금은 위에 뜸??*/
+  }
+    #aboutBox {
+      background-color: #F9AA00;
+      width: 55%;
+      height:70%;
+      margin: 0 auto;
+      position:absolute;
+      /*padding-top: 15%;*/
+    }
+
+  #projectsPg {
+    background-color: #FBFB6D;
+    width: 100%;
+    height: 100%;
+     top:200%;
+    position:absolute;
+
+  }
+
+    .projCircle {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background-color: #F9AA00;
+      display: inline-block;
+    }
+
+  #contactPg {
+    background-color: #FBD77F; /*golden glow*/
+    width: 100%;
+    height: 100%;
+     top:300%;
+    position:absolute;
+  }
+
+  #contactInfo {
+    background-color: #bbb;
+    width:70%;
+    height:70%;
+    position: absolute;
+  }
+
+/*  #contItems {
+    width:70%;
+    height:70%;
+    position: relative;
+  }
+*/
+  #contName {
+    background-color: #eee;
+    width:30%;
+    height:5%;
+    position: relative;
+  }
+
+  #contEmail {
+    background-color: #fff;
+    width:30%;
+    height:5%;
+    top:10%;
+    left:0;
+    position: absolute;
+  }
+
+  #contNo {
+    background-color: #eee;
+    width:30%;
+    height:5%;
+    top:20%;
+    left:0;
+    position: absolute;
+  }
+
+  .centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
