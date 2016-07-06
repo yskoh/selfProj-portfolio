@@ -2,6 +2,9 @@
 body,div,ul,li,dl,dt,dd,ol,p,h1,h2,h3,h4,h5,h6,form {
   margin:0;
   padding:0;
+  /*overflow: scroll;*/
+}
+body {
   overflow:scroll;
 }
 
@@ -16,8 +19,8 @@ body,div,ul,li,dl,dt,dd,ol,p,h1,h2,h3,h4,h5,h6,form {
 
 body {
   font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-  width: 1600px;
-  height: 1000px;
+  width: 1440px;
+  height: 900px;
 }
 
 ul,ol,dl {
@@ -37,24 +40,27 @@ img {
 #container {
   /*background-color: #F9AA00;*/
   background-color: #A7BED0; /*blue*/
-  width: 100%;
-  height: 95%;
+  width: 1440px;
+  height: 900px;
   position: relative;
+  /*overflow-y: scroll;*/
 }
 
 
     #logo {
-      display: inline;
+      display: inline-block;
+      margin: 7px;
+
     }
 
     #gnb {
       background-color: #FC7878; /*pink*/
-      position:relative;
+      position:fixed;
       top: 0;
       left: 0;
       margin: 0;
-      width:100%;
-      height:5%;
+      width:1440px;
+      height: 45px;
       z-index:2;
     }
 
@@ -69,85 +75,215 @@ img {
       }
 
   #introPg {
-    background-color: #FCD68A; /*grandis*/
+    /*background-color: #FCD68A; grandis*/
     background-image: url("./create.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     /*margin-top으로 하면 안 되는 이유??*/
     /*margin-top:5%;*/
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 1440px;
+    height: 900px;
   }
 
   #curtain {
     /*position:absolute;*/
-    width: 100%;
-    height: 100%;
+    width: 1440px;
+    height: 900px;
 /*    z-index: 1;
     background-color: black;*/
-    overflow-y:hidden;
-    overflow-x: hidden;
+    overflow:hidden;
+/*    overflow-y:hidden;
+    overflow-x: hidden;*/
   }
 
   .cards {
     display:block;
-	float: left;
-    width: 100px;
-    height: 100px;
-    background-color: black;
+    float:left;
+    width: 160px;
+    height: 160px;
+    background-color: #545454;
     z-index: 1;
-    margin:0;
-    padding:0;
-    border:0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  #aboutPanel {
+    width: 1440px;
+    height: 900px;
+    display: none;
+    background-color: #FCD68A;
+    position:absolute;
+  }
+
+  #projectPanel {
+    width: 1440px;
+    height: 900px;
+    display: none;
+    background-color: #FBFB6D;
+    position:absolute;
   }
 
   #aboutPg {
-    background-color:#FBD77F;
-    width: 100%;
-    height: 100%;
-    top:100%;
+    background-color:#A7BED0;
+    width: 1440px;
+    height: 900px;
+    top: 900px;
     position:absolute;
+    overflow:hidden;
     /*position:fixed; 왜 이렇게 할 경우, 조금은 위에 뜸??*/
   }
+
+  #download {
+    display: block;
+    width: 100px;
+    height: 50px;
+    background-color: #F9AA00;
+    /*border-radius: 10px;*/
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    /*브라우저마다 조금 달라보이지만.*/
+    line-height: 50px;
+    border: none;
+    position:absolute;
+    top:1050px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #resumeTxt {
+    color:white;
+    font-size: 16px;
+    display: none;
+    z-index: 5;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .colorCover {
+    background-color: #FF784E;
+    width: 0px;
+    height:50px;
+    /*border-radius: 10px;*/
+    line-height: 25px;
+    color: white;
+    font-size: 16px;
+    border: none;
+    position:absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
     #aboutBox {
+      top:1050px;
+      left:50%;
       background-color: #F9AA00;
       width: 55%;
-      height:70%;
-      margin: 0 auto;
-      position:absolute;
+      height: 65%;
+      margin: 0 0 0 -27.5%;
+      position: absolute;
+      /*border-radius: 30px;*/
+      font-size: 30px;
       /*padding-top: 15%;*/
+    }
+    
+    .txtLines {
+      display:none;
+      left: 790px;
+      text-align: center;
+    }
+
+    #texts {
+      height:376px;
+      padding: 105px 20px 105px 20px;
+    }
+
+    #texts div {
+      padding: 5px;
     }
 
   #projectsPg {
-    background-color: #FBFB6D;
-    width: 100%;
-    height: 100%;
-     top:200%;
+    background-color: #48C6B0;
+    width: 1440px;
+    height:900px;
+    top: 200%;
     position:absolute;
+    /*clear:both;*/
 
   }
 
-    .projCircle {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      background-color: #F9AA00;
-      display: inline-block;
+  #circles {
+    width: 1440px;
+    height: 200px;
+    position:absolute;
     }
 
+    .projCircle {
+      width: 200px;
+      height: 200px;
+      /*border-radius: 50%;*/
+      background-color: #F9AA00;
+      margin:0 20px 0 20px;
+      display: none;
+      float: left;
+    }
+
+  .projs {
+    line-height: 200px;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .projModal {
+    width: 60%;
+    height: 60%;
+    position: fixed;
+    top:900px;
+    /*하드하게 중앙 맞춤*/
+    left:50%;
+    margin: -50% 0 0 -30%;
+    background-color: #fff;
+    display:none;
+    position: relative;
+  }
+
+  .cancelBtn img{
+    display: block;
+    width:40px;
+    height:40px;
+    top:0%;
+    left:95%;
+    position: absolute;
+  }
+
   #contactPg {
-    background-color: #FBD77F; /*golden glow*/
-    width: 100%;
-    height: 100%;
-     top:300%;
+    background-color: #A7BED0;
+    width: 1440px;
+    height: 900px;
+    top:300%;
+    position:absolute;
+    overflow: hidden;
+  }
+
+  #contactPanel {
+    width: 1440px;
+    height: 900px;
+    display: none;
+    /*background-color: #FBFB6D;*/
+    background-color: #FBD77F;
     position:absolute;
   }
 
   #contactInfo {
-    background-color: #bbb;
+    background-color: #FFAF7B;
     width:70%;
     height:70%;
+    top:1215px;
+    left:50%;
+    margin: 0 0 0 -35%;
     position: absolute;
   }
 
@@ -183,9 +319,9 @@ img {
   }
 
   .centered {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  /* bring your own prefixes */
-  transform: translate(-50%, -50%);
-}
+    position: fixed;
+    top: 50%;
+    left: 50%;
+     /*bring your own prefixes */
+    transform: translate(-50%, -50%);
+  }
