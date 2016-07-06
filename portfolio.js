@@ -59,8 +59,8 @@ $(document).ready(function () {
       if(e.originalEvent.wheelDelta < 0) {
        //scroll down
        console.log('Down');
-        $(pageList[curr]).animate({"top":"-1000px"},1000, scrollEvent);
-        $(pageList[curr+1%pageList.length]).animate({"top":"0px"},1000, scrollEvent);
+        $(pageList[curr]).animate({"top":"-1000px"},3000, scrollEvent);
+        $(pageList[curr+1%pageList.length]).animate({"top":"0px"},3000, scrollEvent);
         curr++;
       }else {
        //scroll up
