@@ -51,19 +51,27 @@ $(document).ready(function () {
     //color fadeout
   });
 	
-	$('body').one('mousewheel', function(e){
-		if(e.originalEvent.wheelDelta < 0) {
-		 //scroll down
-		 console.log('Down');
-			$("#introPg").css({"top":"-1000px"});
-      $("#aboutPg").css({"top":"0px"});
-		}else {
-		 //scroll up
-		 console.log('Up');
-		}
+  
+  var curr = 0;
+	var scrollEvent = function() {
+      $('body').one('mousewheel', function(e){
+      var pageList = $(".page");
+      if(e.originalEvent.wheelDelta < 0) {
+       //scroll down
+       console.log('Down');
+        $(pageList[curr]).animate({"top":"-1000px"},1000, scrollEvent);
+        $(pageList[curr+1%pageList.length]).animate({"top":"0px"},1000, scrollEvent);
+        curr++;
+      }else {
+       //scroll up
+       console.log('Up');
+      }
 
-		//prevent page fom scrolling
-		return false;
-	});
+      //prevent page fom scrolling
+      return false;
+    });
+  }
+  
+  scrollEvent();
 
 });

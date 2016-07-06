@@ -67,11 +67,6 @@ img {
         display: inline-block;
         padding: 10px;
       }
-
-  .page {
-    -webkit-transition: top 2s, -webkit-transform 2s;
-    transition: top 2s, transform 2s;
-  }
   
   #introPg {
     background-color: #FCD68A; /*grandis*/
