@@ -327,6 +327,10 @@
         <div id="aboutPanel"></div>
         <div id="aboutBox">
           <div id="texts">
+<!--
+            연속되는 같은 클래스 이름이 왜 필요할까? #text p 랑 다른걸까?
+            여러줄에 택스트를 꼭 각각의 테그로 처리해야할까?
+-->
             <p class="txtLines">안녕하세요!</p>
             <p class="txtLines">위메프 스크립트 팀의 <b>고예슬</b>입니다. </p>
             <p class="txtLines">저는 <em>심리학</em> 전공을 한 후, </p>
@@ -369,6 +373,8 @@
 $(document).ready(function () {
   //스크립트는 기능별로 파일로 분리하거나 객체로 묶는게 보기 좋을듯?
 
+  //전역변수들인데. 변수숫자를 줄이기 위해서 객체로 묶으면 어떨까?
+  // var element = { introPg : $('#introPg') } 식으로 
   var introPg = $('#introPg');
   var destination = 0; 
   var downloadBtn = $('#download');
